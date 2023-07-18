@@ -86,6 +86,11 @@ src/
 │   │   ├── CartItem.js
 │   │   └── CartTotal.js
 │   └── ...
+├── css/
+│   ├── checkout.css
+│   ├── cart.css
+│   ├── 
+│   └── ...
 ├── pages/
 │   ├── Home.js
 │   ├── Shop.js
