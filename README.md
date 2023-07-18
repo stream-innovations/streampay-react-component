@@ -30,7 +30,7 @@ src/
 └── App.js
 ```
 
-###€ Explanation of the folder structure:
+### Explanation of the folder structure:
 
 - `components/`: This directory contains reusable components used throughout the application. For example, the `Checkout` folder may contain components related to the checkout process, including the `CheckoutForm` component for rendering the form fields and the `StreamPayButton` component for the StreamPay integration.
 
