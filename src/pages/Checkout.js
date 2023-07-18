@@ -1,10 +1,20 @@
 import React from 'react';
-import { StreamPayButton } from '@streampay/react-components';
+import { StreamPayButton, SolanaWalletConnector } from '@streampay/react-components';
 
-const Checkout = () => {
+const StreamPayCheckout = () => {
   const handlePaymentComplete = (paymentData) => {
     // Handle the payment completion
     console.log('Payment completed:', paymentData);
+  };
+
+  const handlePaymentCancel = () => {
+    // Handle payment cancellation
+    console.log('Payment canceled');
+  };
+
+  const handlePaymentError = (error) => {
+    // Handle payment error
+    console.log('Payment error:', error);
   };
 
   return (
@@ -16,8 +26,20 @@ const Checkout = () => {
       <StreamPayButton
         clientId="<CLIENT_ID>"
         onComplete={handlePaymentComplete}
-        onCancel={() => console.log('Payment canceled')}
-        onError={(error) => console.log('Payment error:', error)}
+        onCancel={handlePaymentCancel}
+        onError={handlePaymentError}
+        walletConnector={SolanaWalletConnector}
+        buttonProps={{
+          style: {
+            backgroundColor: '#000c14',
+            border: '1px solid #000c14',
+            color: '#ffffff',
+            padding: '10px 20px',
+            fontSize: '16px',
+            cursor: 'pointer',
+            borderRadius: '8px',
+          },
+        }}
       >
         Pay with StreamPay
       </StreamPayButton>
@@ -25,4 +47,5 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default StreamPayCheckout;
+
