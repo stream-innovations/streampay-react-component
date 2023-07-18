@@ -1,7 +1,9 @@
 # StreamPay - React component
+
 The folder structure for integrating StreamPay into a React-based storefront.
 
 ### Install
+
 To add a StreamPay button for payments on the Solana blockchain to your checkout page, you can follow these steps:
 
 1. Install Dependencies: Install the required dependencies for integrating StreamPay into your React-based storefront. You need to install the StreamPay React components library and any other necessary dependencies. You can use a package manager like npm or yarn to install these dependencies:
